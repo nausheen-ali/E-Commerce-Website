@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Shopping Cart</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ============== Cart Section Starts Here ============== -->
+  <section class="cart py-5 my-5" id="cart">
+    <div class="container">
+      <div class="section_title text-center mb-5">
+        <h1 class="text-capitalize">Cart</h1>
+      </div>
+      <div class="row bg_cart_1 rounded">
+        <!-- Cart Items -->
+        <div class="col-md-8 border-right">
+          <div class="pt-4">
+            <h5 class="mb-4">Cart (<span>2</span> items)</h5>
+
+            <!-- Product 1 -->
+            <div class="row mb-4">
+              <div class="col-md-5 col-lg-3 col-xl-3">
+                <img src="assets/images/product1.png" class="img-fluid w-100 rounded" alt="Blue Denim Shirt">
+              </div>
+              <div class="col-md-7 col-lg-9 col-xl-9">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h5>Blue denim shirt</h5>
+                    <p class="mb-2 text-muted small">Color: Blue | Size: M</p>
+                  </div>
+                  <div>
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="btn btn-sm btn-outline-primary">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <input class="quantity text-center" type="number" value="1" min="1" max="10" style="width: 60px;">
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="btn btn-sm btn-outline-primary">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                    <small class="form-text text-muted text-center">(1 piece)</small>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <a href="javascript:;" class="text-uppercase small text-danger">
+                    <i class="fas fa-trash-alt mr-1"></i> Remove item
+                  </a>
+                  <p class="mb-0"><strong>₹17.99</strong></p>
+                </div>
+              </div>
+            </div>
+            <hr>
+
+            <!-- Product 2 -->
+            <div class="row mb-4">
+              <div class="col-md-5 col-lg-3 col-xl-3">
+                <img src="assets/images/product3.png" class="img-fluid w-100 rounded" alt="Red Hoodie">
+              </div>
+              <div class="col-md-7 col-lg-9 col-xl-9">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h5>Red Hoodie</h5>
+                    <p class="mb-2 text-muted small">Color: Red | Size: M</p>
+                  </div>
+                  <div>
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="btn btn-sm btn-outline-primary">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <input class="quantity text-center" type="number" value="1" min="1" max="10" style="width: 60px;">
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="btn btn-sm btn-outline-primary">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <a href="javascript:;" class="text-uppercase small text-danger">
+                    <i class="fas fa-trash-alt mr-1"></i> Remove item
+                  </a>
+                  <p class="mb-0"><strong>₹35.99</strong></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="col-md-4">
+          <div class="pt-4">
+            <h5 class="mb-3">Order Summary</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Product name 1</span>
+                <span>x2</span>
+                <span>₹25.98</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Product name 2</span>
+                <span>x2</span>
+                <span>₹25.98</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between border-top pt-3">
+                <div>
+                  <strong>Total amount</strong>
+                  <p class="mb-0">(including VAT)</p>
+                </div>
+                <strong>₹53.98</strong>
+              </li>
+            </ul>
+            <a href="checkout.html" class="btn btn-primary btn-block mt-3">Go to Checkout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============== Cart Section Ends Here ============== -->
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

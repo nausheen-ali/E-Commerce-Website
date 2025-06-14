@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Product Detail</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ============== Product Detail Section ============== -->
+  <section class="product_detail py-5 my-5" id="product_detail">
+    <div class="container">
+      <div class="section_title text-center mb-5">
+        <h1 class="text-capitalize">Product Detail</h1>
+      </div>
+      <div class="row">
+        <!-- Product Image Carousel -->
+        <div class="col-md-6">
+          <div id="carouselExampleIndicators" class="carousel slide shadow rounded" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                <img src="assets/images/product1.png" class="d-block w-50 img-fluid rounded" width="15px" alt="image">
+              </li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1">
+                <img src="assets/images/product2.png" class="d-block w-50 img-fluid rounded" width="15px" alt="image">
+              </li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2">
+                <img src="assets/images/product3.png" class="d-block w-50 img-fluid rounded" width="15px" alt="image">
+              </li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/images/product1.png" class="d-block w-100 img-fluid rounded" alt="image">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/images/product2.png" class="d-block w-100 img-fluid rounded" alt="image">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/images/product3.png" class="d-block w-100 img-fluid rounded" alt="image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="col-md-6">
+          <div class="title mb-4">
+            <h3>Blue Denim Shirt</h3>
+          </div>
+          <div class="category mb-4">
+            <span class="bg-light-gray p-2"><a href="category.html">SHIRT</a></span>
+          </div>
+          <div class="rating d-flex text-danger mb-4">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <div class="price mb-4">
+            <b><span class="mr-1">₹</span><span>400</span></b>
+          </div>
+          <div class="desc mb-4">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nemo aliquid ipsum dolore amet, nesciunt asperiores sequi mollitia iste recusandae. Quasi dolores recusandae aperiam. Obcaecati explicabo sapiente eligendi nesciunt.
+            </p>
+          </div>
+          <div class="qty_section border-top pt-3 mb-4">
+            <label>Quantity</label>
+            <input class="form-control text-center w-25" type="number" name="quantity" value="1" min="1" max="10">
+          </div>
+          <div class="buy">
+            <a href="cart.html" class="btn btn-primary shadow">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============== Related Products ============== -->
+      <section class="related_products py-5 my-5" id="related_products">
+        <h3 class="mb-4">Related Products</h3>
+        <div class="row">
+          <div class="col-md-4 col-6">
+            <div class="border rounded shadow text-center p-3">
+              <img src="assets/images/product1.png" class="img-fluid mb-3" alt="Related Product">
+              <h5><a href="javascript:;">Green Dress with details</a></h5>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="border rounded shadow text-center p-3">
+              <img src="assets/images/product2.png" class="img-fluid mb-3" alt="Related Product">
+              <h5><a href="javascript:;">Green Dress with details</a></h5>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="border rounded shadow text-center p-3">
+              <img src="assets/images/product3.png" class="img-fluid mb-3" alt="Related Product">
+              <h5><a href="javascript:;">Green Dress with details</a></h5>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
