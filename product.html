@@ -2,162 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Product List</title>
-
-  <!-- Bootstrap CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Products</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <!-- Product Listing Section -->
-  <section class="products py-5 my-5" id="products">
-    <div class="container">
-      <div class="section_title text-center mb-5">
-        <h1 class="text-capitalize">Products</h1>
-      </div>
-      <div class="row">
-        <!-- Sidebar Filters -->
-        <div class="col-md-3 border-right mb-5">
-          <h4 class="mb-4 border-bottom">Filters</h4>
-          <div class="mb-5">
-            <label><b>Category</b></label>
-            <ul class="list-group">
-              <li class="list-group-item">Groceries</li>
-              <li class="list-group-item">Beverages</li>
-              <li class="list-group-item">Electronics</li>
-              <li class="list-group-item">Personal Care</li>
-              <li class="list-group-item"></li>
-            </ul>
-          </div>
-          <div>
-            <form>
-              <div class="form-group">
-                <label><b>Price</b></label>
-                <input type="range" min="100" max="10000" step="100" class="form-control-range">
-              </div>
-            </form>
-            <div class="d-flex justify-content-between">
-              <label>₹100</label>
-              <label>₹10000</label>
-            </div>
-          </div>
+<section class="products py-5 my-5" id="products">
+  <div class="container">
+    <div class="section_title text-center mb-5">
+      <h1 class="text-capitalize">Products</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-12 mb-4">
+        <div class="single_product shadow text-center p-3">
+          <img src="assets/images/green-dress.jpg" class="img-fluid" alt="Green Dress">
+          <h5 class="mt-2">Green Dress</h5>
+          <div class="price mb-2"><b>₹400</b></div>
+          <button class="btn btn-sm btn-primary add-to-cart" data-name="Green Dress" data-price="400" data-image="assets/images/green-dress.jpg">Add to Cart</button>
         </div>
-
-        <!-- Product Cards -->
-        <div class="col-md-9">
-          <div class="row">
-            <!-- Repeat this product block as needed -->
-            <div class="col-md-4 col-12 mb-4">
-              <div class="single_product shadow text-center p-1">
-                <div class="product_img">
-                  <a href="product_detail.html?name=Green%20Dress&price=400&image=green-dress.jpg">
-                    <img src="assets/images/green-dress.jpg" class="img-fluid" alt="Green Dress">
-                  </a>
-                </div>
-                <div class="product-caption my-3">
-                  <div class="product-ratting">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                  </div>
-                  <h5><a href="product_detail.html?name=Green%20Dress&price=400&image=green-dress.jpg">Green Dress</a></h5>
-                  <div class="price"><b><span class="mr-1">₹</span><span>400</span></b></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-12 mb-4">
-              <div class="single_product shadow text-center p-1">
-                <div class="product_img">
-                  <a href="product_detail.html?name=Yellow%20Tshirt&price=370&image=yellow-tshirt.jpg">
-                    <img src="assets/images/yellow-tshirt.jpg" class="img-fluid" alt="Yellow Tshirt">
-                  </a>                
-                </div>
-                <div class="product-caption my-3">
-                  <div class="product-ratting">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                  </div>
-                  <h5><a href="product_detail.html?name=Yellow%20Tshirt&price=370&image=yellow-tshirt.jpg">Yellow Tshirt</a></h5>
-                  <div class="price"><b><span class="mr-1">₹</span><span>370</span></b></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-12 mb-4">
-              <div class="single_product shadow text-center p-1">
-                <div class="product_img">
-                  <a href="product_detail.html?name=Water%20Bottle&price=490&image=waterbottle.jpg">
-                    <img src="assets/images/waterbottle.jpg" class="img-fluid" alt="Water Bottle">
-                  </a>                  
-                </div>
-                <div class="product-caption my-3">
-                  <div class="product-ratting">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                  </div>
-                  <h5><a href="product_detail.html?name=Water%20Bottle&price=490&image=waterbottle.jpg">Water Bottle 1L</a></h5>
-                  <div class="price"><b><span class="mr-1">₹</span><span>490</span></b></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-12 mb-4">
-              <div class="single_product shadow text-center p-1">
-                <div class="product_img">
-                  <a href="product_detail.html?name=Nikon%20Camera&price=40000&image=nikon-camera.jpg">
-                    <img src="assets/images/nikon-camera.jpg" class="img-fluid" alt="Nikon Camera">
-                  </a>                  
-                </div>
-                <div class="product-caption my-3">
-                  <div class="product-ratting">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                  </div>
-                  <h5><a href="product_detail.html?name=Nikon%20Camera&price=40000&image=nikon-camera.jpg">Nikon Camera</a></h5>
-                  <div class="price"><b><span class="mr-1">₹</span><span>40000</span></b></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-12 mb-4">
-              <div class="single_product shadow text-center p-1">
-                <div class="product_img">
-                  <a href="product_detail.html?name=Shower%20Gel&price=250&image=showergel.jpg">
-                    <img src="assets/images/showergel.jpg" class="img-fluid" alt="Shower Gel">
-                  </a>                  
-                </div>
-                <div class="product-caption my-3">
-                  <div class="product-ratting">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                  </div>
-                  <h5><a href="product_detail.html?name=Shower%20Gel&price=250&image=showergel.jpg">Shower Gel</a></h5>
-                  <div class="price"><b><span class="mr-1">₹</span><span>250</span></b></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-12 mb-4">
-              <div class="single_product shadow text-center p-1">
-                <div class="product_img">
-                  <a href="product_detail.html?name=Headphones&price=1400&image=headphones.jpg">
-                    <img src="assets/images/headphones.jpg" class="img-fluid" alt="Headphones">
-                  </a>                  
-                </div>
-                <div class="product-caption my-3">
-                  <div class="product-ratting">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i>
-                  </div>
-                  <h5><a href="product_detail.html?name=Headphones&price=1400&image=headphones.jpg">Headphones</a></h5>
-                  <div class="price"><b><span class="mr-1">₹</span><span>1400</span></b></div>
-                </div>
-              </div>
-            </div>
-            <!-- Copy the above block to show more products -->
-          </div>
+      </div>
+      <div class="col-md-4 col-12 mb-4">
+        <div class="single_product shadow text-center p-3">
+          <img src="assets/images/yellow-tshirt.jpg" class="img-fluid" alt="Yellow Tshirt">
+          <h5 class="mt-2">Yellow Tshirt</h5>
+          <div class="price mb-2"><b>₹370</b></div>
+          <button class="btn btn-sm btn-primary add-to-cart" data-name="Yellow Tshirt" data-price="370" data-image="assets/images/yellow-tshirt.jpg">Add to Cart</button>
+        </div>
+      </div>
+      <div class="col-md-4 col-12 mb-4">
+        <div class="single_product shadow text-center p-3">
+          <img src="assets/images/waterbottle.jpg" class="img-fluid" alt="Water Bottle">
+          <h5 class="mt-2">Water Bottle 1L</h5>
+          <div class="price mb-2"><b>₹490</b></div>
+          <button class="btn btn-sm btn-primary add-to-cart" data-name="Water Bottle" data-price="490" data-image="assets/images/waterbottle.jpg">Add to Cart</button>
+        </div>
+      </div>
+      <div class="col-md-4 col-12 mb-4">
+        <div class="single_product shadow text-center p-3">
+          <img src="assets/images/nikon-camera.jpg" class="img-fluid" alt="Nikon Camera">
+          <h5 class="mt-2">Nikon Camera</h5>
+          <div class="price mb-2"><b>₹40000</b></div>
+          <button class="btn btn-sm btn-primary add-to-cart" data-name="Nikon Camera" data-price="40000" data-image="assets/images/nikon-camera.jpg">Add to Cart</button>
+        </div>
+      </div>
+      <div class="col-md-4 col-12 mb-4">
+        <div class="single_product shadow text-center p-3">
+          <img src="assets/images/showergel.jpg" class="img-fluid" alt="Shower Gel">
+          <h5 class="mt-2">Shower Gel</h5>
+          <div class="price mb-2"><b>₹250</b></div>
+          <button class="btn btn-sm btn-primary add-to-cart" data-name="Shower Gel" data-price="250" data-image="assets/images/showergel.jpg">Add to Cart</button>
+        </div>
+      </div>
+      <div class="col-md-4 col-12 mb-4">
+        <div class="single_product shadow text-center p-3">
+          <img src="assets/images/headphones.jpg" class="img-fluid" alt="Headphones">
+          <h5 class="mt-2">Headphones</h5>
+          <div class="price mb-2"><b>₹1400</b></div>
+          <button class="btn btn-sm btn-primary add-to-cart" data-name="Headphones" data-price="1400" data-image="assets/images/headphones.jpg">Add to Cart</button>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click", () => {
+      const name = button.dataset.name;
+      const price = parseFloat(button.dataset.price);
+      const image = button.dataset.image;
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ name, price, image, qty: 1 });
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert("Product added to cart!");
+    });
+  });
+</script>
 </body>
 </html>
