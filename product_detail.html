@@ -50,7 +50,7 @@
             <input class="form-control text-center w-25" type="number" name="quantity" value="1" min="1" max="10">
           </div>
           <div class="buy">
-            <a href="cart.html" class="btn btn-primary shadow">Add to Cart</a>
+          <a href="cart.html" class="btn btn-primary shadow">Add to Cart</a>
           </div>
         </div>
       </div>
@@ -89,16 +89,48 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const params = new URLSearchParams(window.location.search);
-
-    const name = params.get('name') || 'Product';
-    const price = params.get('price') || '0';
+    const name = decodeURIComponent(params.get('name') || 'Product');
+    const price = parseFloat(params.get('price') || '0');
     const image = params.get('image') || 'default.png';
 
-    document.getElementById('productName').innerText = decodeURIComponent(name);
-    document.getElementById('productPrice').innerText = price;
+    document.getElementById('productName').innerText = name;
+    document.getElementById('productPrice').innerText = price.toFixed(2);
     document.getElementById('mainImage').src = 'assets/images/' + image;
+
+    // Handle Add to Cart
+    const addToCartBtn = document.querySelector('.btn-primary');
+    addToCartBtn.addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent link navigation for now
+
+      const quantity = parseInt(document.querySelector('input[name="quantity"]').value);
+
+      const product = {
+        name,
+        price,
+        image,
+        quantity
+      };
+
+      // Get existing cart or create new one
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      // Check if product already exists in cart
+      const existing = cart.find(item => item.name === name);
+
+      if (existing) {
+        existing.quantity += quantity;
+      } else {
+        cart.push(product);
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      // Now navigate to cart
+      window.location.href = 'cart.html';
+    });
   });
 </script>
+
 
 </body>
 </html>

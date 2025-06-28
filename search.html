@@ -1,63 +1,108 @@
-<!-- Search Page Section -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f9f9f9;
+    }
+    .search_section .title h2 {
+      font-weight: bold;
+    }
+    .input-group input {
+      border-radius: 0.5rem 0 0 0.5rem;
+    }
+    .input-group .btn {
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+    .table td {
+      vertical-align: middle;
+    }
+    .table img {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
 <section class="search_section py-5 my-5" id="search_section">
-    <div class="container">
-        <div class="title text-center mb-5">
-            <h2><i class="far fa-file mr-2"></i>Search</h2>
-        </div>
-        <div class="row">
-            <!-- BEGIN RESULT -->
-            <div class="col-md-10 mx-auto">
-                <!-- BEGIN SEARCH INPUT -->
-                <div class="input-group">
-                    <input type="text" class="form-control" value="xyz">
-                    <span class="input-group-btn">
-                        <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
-                    </span>
-                </div>
-                <!-- END SEARCH INPUT -->
-                <small>Showing all results matching "xyz"</small>
-                
-                <!-- BEGIN TABLE RESULT -->
-                <div class="table-responsive mt-3">
-                    <table class="table table-hover">
-                        <tbody class="border-bottom">
-                            <tr>
-                                <td class="number text-center">1</td>
-                                <td class="image"><img src="assets/images/product1.png" width="100px"
-                                        class="img img-fluid" alt=""></td>
-                                <td class="product"><strong>Product 1</strong><br>This is the product description.
-                                </td>
-                                <td class="rate text-right">
-                                    <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span>
-                                </td>
-                                <td class="price text-right">₹350</td>
-                            </tr>
-                            <tr>
-                                <td class="number text-center">2</td>
-                                <td class="image"><img src="assets/images/product2.png" width="100px"
-                                        class="img img-fluid" alt=""></td>
-                                <td class="product"><strong>Product 2</strong><br>This is the product description.</td>
-                                <td class="rate text-right">
-                                    <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span>
-                                </td>
-                                <td class="price text-right">₹350</td>
-                            </tr>
-                            <tr>
-                                <td class="number text-center">3</td>
-                                <td class="image"><img src="assets/images/product3.png" width="100px"
-                                        class="img img-fluid" alt=""></td>
-                                <td class="product"><strong>Product 3</strong><br>This is the product description.</td>
-                                <td class="rate text-right">
-                                    <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span>
-                                </td>
-                                <td class="price text-right">₹350</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- END TABLE RESULT -->
-            </div>
-            <!-- END RESULT -->
-        </div>
+  <div class="container">
+    <div class="title text-center mb-5">
+      <h2><i class="fas fa-search mr-2"></i>Search Products</h2>
     </div>
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+        <div class="input-group mb-3">
+          <input type="text" id="searchInput" class="form-control" placeholder="Search for products...">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button" onclick="searchProducts()"><i class="fa fa-search"></i></button>
+          </div>
+        </div>
+        <small id="searchStatus">Enter a search term to begin...</small>
+
+        <div class="table-responsive mt-3">
+          <table class="table table-hover">
+            <tbody id="productTable" class="border-bottom">
+              <tr>
+                <td class="number text-center">1</td>
+                <td class="image"><img src="assets/images/product1.png" width="100px" class="img img-fluid" alt=""></td>
+                <td class="product"><strong>Green Dress</strong><br>Elegant green outfit.</td>
+                <td class="rate text-right"><span>★★★★★</span></td>
+                <td class="price text-right">₹350</td>
+              </tr>
+              <tr>
+                <td class="number text-center">2</td>
+                <td class="image"><img src="assets/images/product2.png" width="100px" class="img img-fluid" alt=""></td>
+                <td class="product"><strong>Yellow Tshirt</strong><br>Comfortable and stylish tshirt.</td>
+                <td class="rate text-right"><span>★★★★☆</span></td>
+                <td class="price text-right">₹299</td>
+              </tr>
+              <tr>
+                <td class="number text-center">3</td>
+                <td class="image"><img src="assets/images/product3.png" width="100px" class="img img-fluid" alt=""></td>
+                <td class="product"><strong>Headphones</strong><br>High-quality sound headphones.</td>
+                <td class="rate text-right"><span>★★★★☆</span></td>
+                <td class="price text-right">₹1499</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<script>
+  function searchProducts() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const rows = document.querySelectorAll('#productTable tr');
+    let visibleCount = 0;
+
+    rows.forEach(row => {
+      const text = row.innerText.toLowerCase();
+      if (text.includes(input)) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    const status = document.getElementById('searchStatus');
+    if (input.trim() === '') {
+      status.textContent = 'Enter a search term to begin...';
+    } else if (visibleCount === 0) {
+      status.textContent = `No results found for "${input}"`;
+    } else {
+      status.textContent = `Showing ${visibleCount} result(s) matching "${input}"`;
+    }
+  }
+</script>
+
+</body>
+</html>
